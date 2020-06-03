@@ -1,0 +1,35 @@
+.top-navigation {
+    display: flex;
+    align-items: center;
+    &__list {
+        display: flex;
+        list-style-type: none;
+    }
+    &__item {
+
+    }
+    &__link {
+        position: relative;
+        text-decoration: none;
+        font-family: $font-family-heading;
+        font-size: 15px;
+        color: $color-text-inverted;
+        margin-left: 25px;
+        // Active
+        &--active {
+            &::after {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: -16px;
+                height: 3px;
+                width: 100%;
+                background-color: $color-orange-light;
+            }
+        }
+        // Hover
+        &:hover {
+            color: $color-orange-light;
+        }
+    }
+}

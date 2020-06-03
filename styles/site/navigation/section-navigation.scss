@@ -1,0 +1,77 @@
+$icon-size: 50px;
+
+.section-navigation {
+    background-color: $color-dark-grey;
+
+    &--fixed-width {
+        width: 30%;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        /*margin-bottom: 50px;*/
+        color: $color-text-inverted;
+        text-decoration: none;
+        padding: 25px;
+        height: 150px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        &:hover {
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+          }
+    }
+
+    &__step {
+        display: flex;
+        justify-content: center;
+        border: solid 3px $color-orange-light;
+        height: $icon-size;
+        width: $icon-size;
+        border-radius: $icon-size / 2;
+        color: $color-orange-light;
+        font-size: $icon-size / 2;
+        font-family: $font-family-bold;
+        padding-top: 5px;
+        margin-top: -45px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: lighten($color-dark-grey, 5);
+    }
+
+    &__content {
+        width: 100%;
+        text-align: center;
+
+        &__headline {
+            font-family: $font-family-heading;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        background-image: url('https://cdn2.iconfinder.com/data/icons/picol-vector/32/arrow_sans_down-512.png');
+        background-size: contain;
+        height: 40px;
+        width: 40px;
+        background-repeat: no-repeat;
+
+        &--left {
+            left: 30px;
+            transform: rotate(90deg);
+        }
+
+        &--right {
+            right: 30px;
+            transform: rotate(270deg);
+        }
+    }
+}

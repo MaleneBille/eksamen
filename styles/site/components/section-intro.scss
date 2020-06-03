@@ -1,0 +1,36 @@
+$section-spacing: 50px; // local variable
+$section-overlay: radial-gradient(circle, rgba(196,196,196,0.43507825493478647) 0%, rgba(176,176,176,0.95) 29%, rgba(148,148,148,0.95) 100%);
+
+.section-intro {
+    position: relative;
+    background-image: url("../../images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    background-position: bottom center;
+    padding-top: $section-spacing;
+    padding-bottom: $section-spacing * 2;
+    margin-bottom: -$section-spacing;
+    z-index: -1;
+    
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $section-overlay;
+        z-index: -1;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__headline {
+        font-family: $font-family-heading;
+        font-size: 25px;
+    }
+}
